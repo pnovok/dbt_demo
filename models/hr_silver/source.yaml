@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: hr_staging
+    schema: hr_staging
+    database: hr_demo
+    tables:
+      - name: employees
+      - name: departments
+      - name: dept_emp
+      - name: dept_manager
+      - name: salaries
+      - name: departures
+      - name: titles

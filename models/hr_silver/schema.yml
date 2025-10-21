@@ -1,0 +1,70 @@
+
+version: 2
+
+models:
+  - name: employees_slvr
+    description: "An employee silver  model"
+    columns:
+      - name: emp_no
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: departments_slvr
+    description: "An departments silver  model"
+    columns:
+      - name: dept_no
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: salaries_slvr
+    description: "A salaries silver  model"
+    columns:
+      - name: emp_no
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dept_manager_slvr
+    description: "A dept_manager silver  model"
+    columns:
+      - name: emp_no
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: departures_slvr
+    description: "A departures silver  model"
+    columns:
+      - name: emp_no
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dept_emp_slvr
+    description: "A dept_emp silver  model"
+    columns:
+      - name: emp_no
+        description: "The primary key for this table"
+      - name: dept_no
+        description: "The primary key for this table"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - emp_no
+            - dept_no
+
+  - name: titles_slvr
+    description: "A dept_emp silver  model"
+    columns:
+      - name: title_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
