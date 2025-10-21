@@ -1,6 +1,6 @@
 # Welcome to the demo dbt project!
 
-This project is full pipeline. I[m using FiveTran connector to ingest data files from Azure Blob storage to Databricks bronze layer. Then I'm using dbt core to run data transformations and load silver layer tables and aggregations at the gold layer.]
+This project is full pipeline. I'm using FiveTran connector to ingest data files from Azure Blob storage to Databricks bronze layer. Then I'm using dbt core to run data transformations and load silver layer tables and aggregations at the gold layer.
 
 ### Using the starter project
 
